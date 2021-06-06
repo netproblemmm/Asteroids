@@ -23,8 +23,9 @@ namespace Asteroids
 
         private void Update()
         {
-            var direction = Input.mousePosition - _camera.WorldToScreenPoint(transform.position);
-            _ship.Rotation(direction);
+            // Отключил пока ротацию корабля
+            //var direction = Input.mousePosition - _camera.WorldToScreenPoint(transform.position);
+            //_ship.Rotation(direction);
 
             _ship.Move(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), Time.deltaTime);
 
